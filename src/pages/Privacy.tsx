@@ -20,16 +20,16 @@ export default function Privacy() {
               </CardHeader>
               <CardContent className="prose prose-sm max-w-none">
                 <p>
-                  TalentScope collects information you provide directly to us, such as when you create an account, 
-                  connect your gaming platforms, or contact us for support.
+                  Chosen1 AI collects information you provide directly to us, such as when you create an account, 
+                  connect your CS:GO platforms, or contact us for support.
                 </p>
                 
                 <h4 className="font-semibold mt-4 mb-2">Account Information</h4>
                 <ul className="list-disc list-inside space-y-1">
                   <li>Username and email address</li>
-                  <li>Gaming platform IDs (Steam, Discord, etc.)</li>
-                  <li>Region and gaming preferences</li>
-                  <li>Performance data from connected platforms</li>
+                  <li>CS:GO platform IDs (Steam, FACEIT, etc.)</li>
+                  <li>Region and CS:GO preferences</li>
+                  <li>CS:GO performance data from connected platforms</li>
                 </ul>
               </CardContent>
             </Card>
@@ -41,9 +41,9 @@ export default function Privacy() {
               <CardContent className="prose prose-sm max-w-none">
                 <p>We use the information we collect to:</p>
                 <ul className="list-disc list-inside space-y-1">
-                  <li>Provide and improve our talent matching services</li>
-                  <li>Generate personalized performance reports</li>
-                  <li>Connect players with scouts and opportunities</li>
+                  <li>Provide and improve our CS:GO talent matching services</li>
+                  <li>Generate personalized CS:GO performance reports</li>
+                  <li>Connect CS:GO players with scouts and opportunities</li>
                   <li>Communicate with you about your account and services</li>
                 </ul>
               </CardContent>
@@ -68,8 +68,8 @@ export default function Privacy() {
               <CardContent>
                 <p>
                   If you have any questions about this Privacy Policy, please contact us at{' '}
-                  <a href="mailto:privacy@talentscope.com" className="text-primary hover:underline">
-                    privacy@talentscope.com
+                  <a href="mailto:privacy@chosen1ai.com" className="text-primary hover:underline">
+                    privacy@chosen1ai.com
                   </a>
                 </p>
               </CardContent>

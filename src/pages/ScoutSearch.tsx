@@ -50,14 +50,13 @@ export default function ScoutSearch() {
   
   // Filters
   const [filters, setFilters] = useState({
-    game: 'all',
     region: 'all',
     experience: 'all',
     availability: 'all' as string,
   });
 
   const suggestions = [
-    "Find players with high clutch percentage in CS:GO",
+    "Find players with high clutch percentage",
     "Top riflers with aggressive entry style", 
     "I need a support player good at utility usage"
   ];
@@ -71,7 +70,6 @@ export default function ScoutSearch() {
 
     try {
       const result = await scoutService.searchPlayers(searchTerm, {
-        game: filters.game === 'all' ? undefined : filters.game,
         region: filters.region === 'all' ? undefined : filters.region,
         experience: filters.experience === 'all' ? undefined : filters.experience,
         availability: filters.availability === 'all' ? undefined : filters.availability === 'true',
@@ -140,7 +138,6 @@ export default function ScoutSearch() {
 
   const resetFilters = () => {
     setFilters({
-      game: 'all',
       region: 'all',
       experience: 'all',
       availability: 'all',
@@ -174,22 +171,6 @@ export default function ScoutSearch() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Game</label>
-                    <Select value={filters.game} onValueChange={(value) => setFilters(prev => ({ ...prev, game: value }))}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Any game" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">Any game</SelectItem>
-                        <SelectItem value="CS:GO">CS:GO</SelectItem>
-                        <SelectItem value="CS2">CS2</SelectItem>
-                        <SelectItem value="Valorant">Valorant</SelectItem>
-                        <SelectItem value="League of Legends">League of Legends</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Region</label>
                     <Select value={filters.region} onValueChange={(value) => setFilters(prev => ({ ...prev, region: value }))}>
@@ -259,16 +240,16 @@ export default function ScoutSearch() {
               <div className="space-y-6">
                 {/* Header */}
                 <div>
-                  <h1 className="text-3xl font-bold mb-2">Player Search</h1>
+                  <h1 className="text-3xl font-bold mb-2">CS:GO Player Search</h1>
                   <p className="text-muted-foreground">
-                    Search for players by attributes, stats, or playstyle
+                    Search for CS:GO players by attributes, stats, or playstyle
                   </p>
                 </div>
 
                 {/* Search Input */}
                 <div className="relative">
                   <Input
-                    placeholder="Describe the player you're looking for..."
+                    placeholder="Describe the CS:GO player you're looking for..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={(e) => {
@@ -353,8 +334,8 @@ export default function ScoutSearch() {
                                   </CardTitle>
                                   <CardDescription className="flex items-center gap-4 mt-1">
                                     <span>{player.role}</span>
-                                    <Badge variant="outline">{player.game}</Badge>
-                                    <Badge variant="outline">{player.region}</Badge>
+                            <Badge variant="outline">{player.game || 'CS:GO'}</Badge>
+                            <Badge variant="outline">{player.region}</Badge>
                                     <Badge variant={getFormBadgeVariant(player.lastThirtyDayForm)}>
                                       {player.lastThirtyDayForm} form
                                     </Badge>
@@ -423,9 +404,9 @@ export default function ScoutSearch() {
                                     <DrawerContent>
                                       <DrawerHeader>
                                         <DrawerTitle>{player.name} - Detailed Profile</DrawerTitle>
-                                        <DrawerDescription>
-                                          {player.role} • {player.game} • {player.region}
-                                        </DrawerDescription>
+                        <DrawerDescription>
+                          {player.role} • {player.game || 'CS:GO'} • {player.region}
+                        </DrawerDescription>
                                       </DrawerHeader>
                                       <div className="p-6 space-y-6">
                                         <div className="grid md:grid-cols-2 gap-6">
@@ -512,10 +493,10 @@ export default function ScoutSearch() {
                       <Card>
                         <CardContent className="text-center py-8">
                           <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                          <h3 className="text-lg font-semibold mb-2">No players found</h3>
-                          <p className="text-muted-foreground">
-                            Try adjusting your search terms or filters to find more results.
-                          </p>
+                      <h3 className="text-lg font-semibold mb-2">No CS:GO players found</h3>
+                      <p className="text-muted-foreground">
+                        Try adjusting your search terms or filters to find more results.
+                      </p>
                         </CardContent>
                       </Card>
                     )}
@@ -527,7 +508,7 @@ export default function ScoutSearch() {
                   <Card>
                     <CardContent className="text-center py-12">
                       <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                      <h3 className="text-lg font-semibold mb-2">Search players by attributes, stats, or style</h3>
+                      <h3 className="text-lg font-semibold mb-2">Search CS:GO players by attributes, stats, or style</h3>
                       <p className="text-muted-foreground">
                         Use the search box above or try one of the suggested searches to get started.
                       </p>

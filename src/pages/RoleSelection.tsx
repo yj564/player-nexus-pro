@@ -26,7 +26,7 @@ export default function RoleSelection() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Choose Your Path</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              TalentScope connects the esports ecosystem. Are you looking to discover talent or showcase your skills?
+              Chosen1 AI connects the CS:GO ecosystem. Are you looking to discover talent or showcase your skills?
             </p>
           </div>
 
@@ -39,15 +39,15 @@ export default function RoleSelection() {
                 </div>
                 <CardTitle className="text-2xl">Scout</CardTitle>
                 <CardDescription className="text-base">
-                  Search for players by performance, style, and potential
+                  Search for CS:GO players by performance, style, and potential
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Users className="h-5 w-5 text-electric" />
-                    <span className="text-sm">Access player database</span>
-                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <Users className="h-5 w-5 text-electric" />
+                      <span className="text-sm">Access CS:GO player database</span>
+                    </div>
                   <div className="flex items-center space-x-3">
                     <BarChart3 className="h-5 w-5 text-electric" />
                     <span className="text-sm">Advanced performance analytics</span>
@@ -76,7 +76,7 @@ export default function RoleSelection() {
                 </div>
                 <CardTitle className="text-2xl">Player</CardTitle>
                 <CardDescription className="text-base">
-                  Connect your game data to get a tailored performance report
+                  Connect your CS:GO data to get a tailored performance report
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">

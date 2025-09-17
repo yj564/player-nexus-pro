@@ -20,7 +20,7 @@ export default function Terms() {
               </CardHeader>
               <CardContent className="prose prose-sm max-w-none">
                 <p>
-                  By accessing and using TalentScope, you accept and agree to be bound by the terms 
+                  By accessing and using Chosen1 AI, you accept and agree to be bound by the terms 
                   and provision of this agreement.
                 </p>
               </CardContent>
@@ -62,7 +62,7 @@ export default function Terms() {
               </CardHeader>
               <CardContent className="prose prose-sm max-w-none">
                 <p>
-                  TalentScope shall not be liable for any indirect, incidental, special, consequential, 
+                  Chosen1 AI shall not be liable for any indirect, incidental, special, consequential, 
                   or punitive damages resulting from your use of the service.
                 </p>
               </CardContent>
@@ -75,8 +75,8 @@ export default function Terms() {
               <CardContent>
                 <p>
                   Questions about the Terms of Service should be sent to{' '}
-                  <a href="mailto:legal@talentscope.com" className="text-primary hover:underline">
-                    legal@talentscope.com
+                  <a href="mailto:legal@chosen1ai.com" className="text-primary hover:underline">
+                    legal@chosen1ai.com
                   </a>
                 </p>
               </CardContent>

@@ -29,7 +29,7 @@ export function Layout({ children, showNavigation = true }: LayoutProps) {
                 <div className="absolute -top-1 -right-1 h-3 w-3 bg-electric rounded-full animate-pulse opacity-70" />
               </div>
               <span className="font-bold text-xl bg-gaming-gradient bg-clip-text text-transparent">
-                TalentScope
+                Chosen1 AI
               </span>
             </Link>
 

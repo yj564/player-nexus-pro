@@ -53,7 +53,7 @@ const mockPlayers: Player[] = [
     role: 'Entry Fragger',
     strengths: ['Aggressive positioning', 'High first-kill rate', 'Map control'],
     lastThirtyDayForm: 'Excellent',
-    summary: 'Consistent entry fragger with exceptional aim and game sense. Strong team communication.',
+    summary: 'Consistent entry fragger with exceptional aim and game sense. Strong team communication in CS:GO.',
     game: 'CS:GO',
     region: 'Europe',
     experience: 'Semi-Pro',
@@ -67,8 +67,8 @@ const mockPlayers: Player[] = [
     role: 'Support',
     strengths: ['Smoke timing', 'Flash coordination', 'Team utility'],
     lastThirtyDayForm: 'Good',
-    summary: 'Strategic support player with deep understanding of utility usage and team coordination.',
-    game: 'Valorant',
+    summary: 'Strategic support player with deep understanding of CS:GO utility usage and team coordination.',
+    game: 'CS:GO',
     region: 'North America',
     experience: 'Pro',
     availability: false,
@@ -80,12 +80,39 @@ const mockPlayers: Player[] = [
     role: 'Rifler',
     strengths: ['Clutch situations', 'Positioning', 'Game sense'],
     lastThirtyDayForm: 'Outstanding',
-    summary: 'Reliable rifler with exceptional clutch percentage and strategic thinking.',
+    summary: 'Reliable rifler with exceptional clutch percentage and strategic thinking in CS:GO.',
     game: 'CS:GO',
     region: 'Asia',
     experience: 'Semi-Pro',
     availability: true,
     clutchPercentage: 85
+  },
+  {
+    id: '4',
+    name: 'AWPMaster',
+    role: 'AWPer',
+    strengths: ['Long range precision', 'Map awareness', 'Economic management'],
+    lastThirtyDayForm: 'Excellent',
+    summary: 'Elite AWPer with incredible precision and game-changing potential in clutch rounds.',
+    game: 'CS:GO',
+    region: 'Europe',
+    experience: 'Pro',
+    availability: true,
+    clutchPercentage: 72,
+    entryStyle: 'Passive'
+  },
+  {
+    id: '5',
+    name: 'IGL_Commander',
+    role: 'In-Game Leader',
+    strengths: ['Strategic calling', 'Team coordination', 'Anti-stratting'],
+    lastThirtyDayForm: 'Good',
+    summary: 'Experienced IGL with strong tactical knowledge and team leadership in competitive CS:GO.',
+    game: 'CS:GO',
+    region: 'North America',
+    experience: 'Pro',
+    availability: false,
+    utilityUsage: 'Advanced'
   }
 ];
 
@@ -148,7 +175,7 @@ export const authService = {
       username: 'DemoUser',
       email: credentials.email,
       region: 'Global',
-      primaryGames: ['CS:GO', 'Valorant'],
+      primaryGames: ['CS:GO'],
     };
 
     currentUser = user;

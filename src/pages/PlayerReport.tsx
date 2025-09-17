@@ -161,7 +161,7 @@ export default function PlayerReport() {
             {/* Header */}
             <div className="flex items-center justify-between">
               <div>
-                <h1 className="text-3xl font-bold mb-2">Performance Report</h1>
+                <h1 className="text-3xl font-bold mb-2">CS:GO Performance Report</h1>
                 <p className="text-muted-foreground">
                   Generated on {new Date(report.createdAt).toLocaleDateString()}
                 </p>
@@ -268,17 +268,17 @@ export default function PlayerReport() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <BarChart3 className="h-5 w-5" />
-                  Performance Trends
+                  CS:GO Performance Trends
                 </CardTitle>
                 <CardDescription>
-                  Your performance metrics over the last 3 months
+                  Your CS:GO performance metrics over the last 3 months
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="h-64 bg-muted/30 rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <BarChart3 className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground">Performance chart visualization</p>
+                    <p className="text-muted-foreground">CS:GO performance chart visualization</p>
                     <p className="text-sm text-muted-foreground">Coming soon in full implementation</p>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ export default function PlayerReport() {
                     Key Strengths
                   </CardTitle>
                   <CardDescription>
-                    What you excel at in your gameplay
+                    What you excel at in your CS:GO gameplay
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -335,17 +335,17 @@ export default function PlayerReport() {
             {/* Match Analysis Heatmap Placeholder */}
             <Card className="shadow-card">
               <CardHeader>
-                <CardTitle>Match Performance Heatmap</CardTitle>
+                <CardTitle>CS:GO Match Performance Heatmap</CardTitle>
                 <CardDescription>
-                  Visual breakdown of your performance across different game situations
+                  Visual breakdown of your CS:GO performance across different game situations
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="h-48 bg-muted/30 rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <Activity className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground">Interactive heatmap visualization</p>
-                    <p className="text-sm text-muted-foreground">Full match analysis coming soon</p>
+                    <p className="text-muted-foreground">Interactive CS:GO heatmap visualization</p>
+                    <p className="text-sm text-muted-foreground">Full CS:GO match analysis coming soon</p>
                   </div>
                 </div>
               </CardContent>

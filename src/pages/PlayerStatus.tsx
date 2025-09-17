@@ -98,16 +98,16 @@ export default function PlayerStatus() {
       await playerService.generateReport(user.id);
       await emailService.sendEmail(
         user.email,
-        "Your Player Report Is Ready",
-        `Hi ${user.username},\n\nYour TalentScope performance report has been completed and is ready for review. You can view it at any time in your dashboard.\n\nBest regards,\nThe TalentScope Team`
+        "Your CS:GO Report Is Ready",
+        `Hi ${user.username},\n\nYour Chosen1 AI CS:GO performance report has been completed and is ready for review. You can view it at any time in your dashboard.\n\nBest regards,\nThe Chosen1 AI Team`
       );
       
       setReportStatus('ready');
       setShowSimulateButton(false);
-      toast({
-        title: "Report ready!",
-        description: "Your performance analysis is complete. Check your email for details.",
-      });
+        toast({
+          title: "Report ready!",
+          description: "Your CS:GO performance analysis is complete. Check your email for details.",
+        });
     } catch (error) {
       toast({
         title: "Error",
@@ -168,9 +168,9 @@ export default function PlayerStatus() {
           <div className="space-y-8">
             {/* Header */}
             <div className="text-center">
-              <h1 className="text-3xl font-bold mb-4">Report Status</h1>
+              <h1 className="text-3xl font-bold mb-4">CS:GO Report Status</h1>
               <p className="text-xl text-muted-foreground">
-                Track your performance analysis and manage your profile visibility
+                Track your CS:GO performance analysis and manage your profile visibility
               </p>
             </div>
 
@@ -192,7 +192,7 @@ export default function PlayerStatus() {
                       </div>
                       <Progress value={65} className="h-2" />
                       <p className="text-sm text-muted-foreground">
-                        Your report is being generated. ETA: up to 7 days. We'll email{' '}
+                        Your CS:GO report is being generated. ETA: up to 7 days. We'll email{' '}
                         <span className="font-medium">{user?.email}</span> when it's ready.
                       </p>
                     </div>
@@ -200,7 +200,7 @@ export default function PlayerStatus() {
                     <div className="flex items-center gap-2 p-4 bg-muted/50 rounded-lg">
                       <Mail className="h-5 w-5 text-electric" />
                       <span className="text-sm">
-                        We're crunching your matches and trends—this takes up to 7 days.
+                        We're crunching your CS:GO matches and trends—this takes up to 7 days.
                       </span>
                     </div>
 

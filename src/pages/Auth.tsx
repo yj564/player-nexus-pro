@@ -51,7 +51,7 @@ export default function Auth() {
       if (result.success) {
         toast({
           title: "Welcome back!",
-          description: "Successfully logged in to TalentScope.",
+          description: "Successfully logged in to Chosen1 AI.",
         });
         navigate('/role');
       } else {
@@ -81,7 +81,7 @@ export default function Auth() {
       if (result.success) {
         toast({
           title: "Account created!",
-          description: "Welcome to TalentScope. Choose your role to continue.",
+          description: "Welcome to Chosen1 AI. Choose your role to continue.",
         });
         navigate('/role');
       } else {
@@ -131,13 +131,7 @@ export default function Auth() {
 
   const games = [
     'CS:GO',
-    'CS2',
-    'Valorant',
-    'League of Legends',
-    'Dota 2',
-    'Apex Legends',
-    'Overwatch 2',
-    'Rainbow Six Siege'
+    'CS2'
   ];
 
   return (
@@ -153,10 +147,10 @@ export default function Auth() {
               </div>
             </div>
             <h1 className="text-3xl font-bold bg-gaming-gradient bg-clip-text text-transparent mb-2">
-              TalentScope
+              Chosen1 AI
             </h1>
             <p className="text-muted-foreground">
-              Connect scouts with gaming talent
+              Elite CS:GO talent discovery platform
             </p>
           </div>
 
@@ -164,7 +158,7 @@ export default function Auth() {
             <CardHeader className="text-center">
               <CardTitle>Join the platform</CardTitle>
               <CardDescription>
-                Sign up or log in to start connecting with esports talent
+                Sign up or log in to start connecting with elite CS:GO talent
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -330,8 +324,8 @@ export default function Auth() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label>Primary Games (select multiple)</Label>
-                      <div className="grid grid-cols-2 gap-2 max-h-32 overflow-y-auto">
+                      <Label>Primary CS:GO experience (select applicable)</Label>
+                      <div className="grid grid-cols-2 gap-2">
                         {games.map(game => (
                           <div key={game} className="flex items-center space-x-2">
                             <Checkbox

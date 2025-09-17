@@ -31,28 +31,21 @@ export default function PlayerConnect() {
       id: 'steam',
       name: 'Steam',
       icon: Zap,
-      description: 'Access CS:GO, CS2, and other Steam games',
+      description: 'Access CS:GO and CS2 statistics',
       color: 'text-blue-600'
     },
     {
       id: 'faceit',
       name: 'FACEIT',
       icon: Shield,
-      description: 'Detailed match history and statistics',
+      description: 'Detailed CS:GO match history and statistics',
       color: 'text-orange-600'
-    },
-    {
-      id: 'valorant',
-      name: 'Valorant API',
-      icon: Gamepad2,
-      description: 'Riot Games official statistics',
-      color: 'text-red-600'
     },
     {
       id: 'cs2stats',
       name: 'CS2 Stats',
       icon: Monitor,
-      description: 'Professional match data and analytics',
+      description: 'Professional CS:GO match data and analytics',
       color: 'text-purple-600'
     }
   ];
@@ -120,9 +113,9 @@ export default function PlayerConnect() {
           <div className="space-y-8">
             {/* Header */}
             <div className="text-center">
-              <h1 className="text-3xl font-bold mb-4">Connect your game data</h1>
+              <h1 className="text-3xl font-bold mb-4">Connect your CS:GO data</h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Grant read-only access so we can analyze your performance and generate a tailored report.
+                Grant read-only access so we can analyze your CS:GO performance and generate a tailored report.
               </p>
             </div>
 
@@ -132,16 +125,16 @@ export default function PlayerConnect() {
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <TrendingUp className="h-8 w-8 text-electric mx-auto mb-3" />
-                    <h3 className="font-semibold mb-2">Performance Analytics</h3>
+                    <h3 className="font-semibold mb-2">CS:GO Performance Analytics</h3>
                     <p className="text-sm text-muted-foreground">
-                      Detailed breakdown of your gameplay patterns and strengths
+                      Detailed breakdown of your CS:GO gameplay patterns and strengths
                     </p>
                   </div>
                   <div className="text-center">
                     <Database className="h-8 w-8 text-electric mx-auto mb-3" />
                     <h3 className="font-semibold mb-2">Match History Analysis</h3>
                     <p className="text-sm text-muted-foreground">
-                      Comprehensive review of your recent matches and trends
+                      Comprehensive review of your recent CS:GO matches and trends
                     </p>
                   </div>
                   <div className="text-center">
@@ -158,9 +151,9 @@ export default function PlayerConnect() {
             {/* Provider Selection */}
             <Card>
               <CardHeader>
-                <CardTitle>Select your gaming platforms</CardTitle>
+                <CardTitle>Select your CS:GO platforms</CardTitle>
                 <CardDescription>
-                  Choose the platforms where you have active gaming data. We'll securely connect to analyze your performance.
+                  Choose the platforms where you have active CS:GO data. We'll securely connect to analyze your performance.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -266,10 +259,10 @@ export default function PlayerConnect() {
                   />
                   <div className="space-y-2">
                     <label htmlFor="consent" className="text-sm font-medium cursor-pointer">
-                      I authorize this site to access my game data for analysis and to contact me at my registered email ({user?.email}).
+                      I authorize this site to access my CS:GO data for analysis and to contact me at my registered email ({user?.email}).
                     </label>
                     <p className="text-xs text-muted-foreground">
-                      Your data is processed securely and used only for generating your performance report. 
+                      Your data is processed securely and used only for generating your CS:GO performance report. 
                       You can revoke access at any time through your account settings.
                     </p>
                   </div>
