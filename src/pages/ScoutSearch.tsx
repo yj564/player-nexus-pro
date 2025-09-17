@@ -50,10 +50,10 @@ export default function ScoutSearch() {
   
   // Filters
   const [filters, setFilters] = useState({
-    game: '',
-    region: '',
-    experience: '',
-    availability: undefined as boolean | undefined,
+    game: 'all',
+    region: 'all',
+    experience: 'all',
+    availability: 'all' as string,
   });
 
   const suggestions = [
@@ -70,7 +70,12 @@ export default function ScoutSearch() {
     setHasSearched(true);
 
     try {
-      const result = await scoutService.searchPlayers(searchTerm, filters);
+      const result = await scoutService.searchPlayers(searchTerm, {
+        game: filters.game === 'all' ? undefined : filters.game,
+        region: filters.region === 'all' ? undefined : filters.region,
+        experience: filters.experience === 'all' ? undefined : filters.experience,
+        availability: filters.availability === 'all' ? undefined : filters.availability === 'true',
+      });
       if (result.success && result.players) {
         setPlayers(result.players);
         if (result.players.length === 0) {
@@ -135,10 +140,10 @@ export default function ScoutSearch() {
 
   const resetFilters = () => {
     setFilters({
-      game: '',
-      region: '',
-      experience: '',
-      availability: undefined,
+      game: 'all',
+      region: 'all',
+      experience: 'all',
+      availability: 'all',
     });
   };
 
@@ -176,7 +181,7 @@ export default function ScoutSearch() {
                         <SelectValue placeholder="Any game" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Any game</SelectItem>
+                        <SelectItem value="all">Any game</SelectItem>
                         <SelectItem value="CS:GO">CS:GO</SelectItem>
                         <SelectItem value="CS2">CS2</SelectItem>
                         <SelectItem value="Valorant">Valorant</SelectItem>
@@ -192,7 +197,7 @@ export default function ScoutSearch() {
                         <SelectValue placeholder="Any region" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Any region</SelectItem>
+                        <SelectItem value="all">Any region</SelectItem>
                         <SelectItem value="North America">North America</SelectItem>
                         <SelectItem value="Europe">Europe</SelectItem>
                         <SelectItem value="Asia">Asia</SelectItem>
@@ -208,7 +213,7 @@ export default function ScoutSearch() {
                         <SelectValue placeholder="Any level" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Any level</SelectItem>
+                        <SelectItem value="all">Any level</SelectItem>
                         <SelectItem value="Amateur">Amateur</SelectItem>
                         <SelectItem value="Semi-Pro">Semi-Pro</SelectItem>
                         <SelectItem value="Pro">Pro</SelectItem>
@@ -219,17 +224,17 @@ export default function ScoutSearch() {
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Availability</label>
                     <Select 
-                      value={filters.availability === undefined ? '' : filters.availability.toString()} 
+                      value={filters.availability} 
                       onValueChange={(value) => setFilters(prev => ({ 
                         ...prev, 
-                        availability: value === '' ? undefined : value === 'true' 
+                        availability: value 
                       }))}
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Any status" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Any status</SelectItem>
+                        <SelectItem value="all">Any status</SelectItem>
                         <SelectItem value="true">Open to offers</SelectItem>
                         <SelectItem value="false">Not available</SelectItem>
                       </SelectContent>
